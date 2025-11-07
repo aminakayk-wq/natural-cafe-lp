@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  color: #444;
+  background-color: #f8f5f0;
+  margin: 0;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #6b4f2d;
+}
+
+.g-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.g-nav a {
+  text-decoration: none;
+  color: #6b4f2d;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.g-nav a:hover {
+  opacity: 0.7;
+}
+
+/* main visual */
+.mainvisual {
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.main-text {
+  position: relative;
+  text-align: center;
+}
+
+.main-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #fffaf0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #c9a77c;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b89469;
+}
+
+/* sections */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.main-text {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c9a77c;
+  margin: 10px auto 0;
+}
+
+/* menu */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item h3 {
+  margin: 15px 0 10px;
+  color: #5c4632;
+  font-size: 1.1rem;
+}
+
+.item p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   営業時間 & アクセスセクション 統一デザイン
+   ========================================================= */
+
+.hours,
+.access {
+  background: #fff;                         /* 明るめの背景で統一 */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 80px 5%;
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* 見出し */
+.hours h2,
+.access h2 {
+  color: #6b4f2d;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.hours h2::after,
+.access h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c9a77c;
+  margin: 10px auto 0;
+}
+
+/* テーブル（営業時間） */
+.hours table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  background: #fdfbf8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.hours th,
+.hours td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.hours th {
+  background: #f5efe8;
+  color: #5c4632;
+  width: 40%;
+  font-weight: 600;
+  text-align: left;
+}
+
+.hours td {
+  text-align: right;
+  color: #444;
+}
+
+.hours tr:last-child th,
+.hours tr:last-child td {
+  border-bottom: none;
+}
+
+/* アクセス（地図・住所） */
+.access p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.access .map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+  .hours,
+  .access {
+    padding: 60px 8%;
+    margin: 60px auto;
+  }
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #fff;
+  color: #6b4f2d;
+  font-size: 0.9rem;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fadein.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainvisual {
+    height: 60vh;
+    padding: 0 5%;
+  }
+
+  .main-text h2 {
+    font-size: 1.6rem;
+  }
+}
