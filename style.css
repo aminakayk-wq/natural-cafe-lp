@@ -44,7 +44,7 @@ header {
 
 /* main visual */
 .mainvisual {
-  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url('./img/cafe.png') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
